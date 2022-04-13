@@ -1,0 +1,15 @@
+The install-driver.sh script will build the kernel drivers for wifi and Bluetooth and install the proper Rf power tables along with the chip firmware.
+Please note however that the install-driver.sh script does NEITHER insert the driver modules into linux kernel NOR does it set them up for plug n play.
+
+To run the install-driver.sh script, execute ./install-driver.sh ant=<fractus|gw40|fxp832|walsin>
+
+Note about antenna:
+There may be support for only one antenna type. In this case you may omit the ant=xxx argument.
+If several antenna options are available and you don't know antenna type, fractus is probably your best bet.
+
+By default, the install-driver.sh script will perform a native build for the current platform (only x86 and arm are supported).
+
+For cross-compilation, you'll need to split the install-driver.sh script into two parts: One part to be executed in the host computer where only cross-compilation takes place
+and one part, in which the build step must be excluded, to be executed on the target
+
+Please read document '1543 - SPB209A EVB - Driver Install User Guide' for instructions how to insert the driver modules into linux kernel

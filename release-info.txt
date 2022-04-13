@@ -1,0 +1,6 @@
+PRODUCT=209A
+Driver=8887_19.p59
+FWNAME=sd8887_uapsta_a2.bin
+HDW_Revision=21685
+INTERFACE=sdio
+BTDIR=mbt_src
